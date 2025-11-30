@@ -1,0 +1,2 @@
+<!--pages/caiwu-1/caiwu-1.wxml-->
+<text>初始金额:{{item.yuanshi}},支出金额:{{item.zhichu}},支出事项：{{item.option}},余额：{{item.yu_e}}</text>

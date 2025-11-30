@@ -1,0 +1,21 @@
+Page({
+  data:{
+  item:{}
+  },
+  onLoad(options){
+    console.log("列表携带的值",options)
+    var id= options.id
+    wx.cloud.database().collection("caiwu")
+   .doc(id)
+   .get()
+   .then(res=>{
+    console.log("查询成功",res)
+    this.setData({
+      item:res.data
+    })
+   })
+   .catch(res=>{
+    console.log("查询失败",res)
+   })
+  }
+})
